@@ -2,7 +2,7 @@ HenricoCrime
 ============
 
 This is a site I developed as a personal project back in 2007. Similar to sites for Chicago and Richmond, 
-it displayed crime incident info on a map. I got the data by scraping the HCPD's public information search form,
+it displayed crime incident info from Henrico County, Virginia on a map. I got the data by scraping the HCPD's public information search form,
 and running all of the addresses through various geocoding services looking for a good match.
 
 It also had a nifty "heatmap" view that would simply display a few hundred translucent red dots on the map, so
@@ -25,7 +25,7 @@ Still with me? Okay then.
 
 Some things you'll need to do:
 
-* Set up a MySQL database (schema TBD)
+* Set up a MySQL database (run data/setup.sql)
 * Fill in DB credentials in dbsetup.php and tools/HenricoCrime.php
 * Add a Google Maps API key to get_gmap_api_key in functions.php
 * Change the email info in send_message in functions.php
@@ -36,3 +36,8 @@ your queries.
 
 Set up a daily cron job to run tools/fetch_daily.php (on the command line, not an HTTP request). This does
 the scraping, geocoding, and database inserting.
+
+Data
+----
+
+In the data directory is a gzipped SQL script to populate the incident table with all the incidents I have (124,699 records from February 2006 to June 2010). I have also provided this data as a gzipped GeoJSON file.
