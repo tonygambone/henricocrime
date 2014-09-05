@@ -33,3 +33,6 @@ Some things you'll need to do:
 
 Looking over this now, the SQL stuff is injection-tastic, so don't use any of that unless you parameterize
 your queries.
+
+Set up a daily cron job to run tools/fetch_daily.php (on the command line, not an HTTP request). This does
+the scraping, geocoding, and database inserting.
