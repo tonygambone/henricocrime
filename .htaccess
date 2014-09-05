@@ -1,0 +1,21 @@
+RewriteEngine on
+AddDefaultCharset UTF-8
+
+# FastCGI
+#AddHandler fastcgi-script fcg fcgi fpl
+#AddHandler php5-fastcgi .php
+#Action php5-fastcgi /php5-wrapper.fcgi
+
+# rewrite dir/yyyy/mm/dd/ to dir/?d=mm/dd/yyyy
+RewriteRule (\d+)/(\d+)/(\d+)/?$ .?d=$2/$3/$1
+
+# rewrite dir/foo/ to dir/foo.php
+RewriteRule ([a-z_]+)/$ $1.php
+
+# rewrite dir/cloud_fetch/nnn/ to dir/cloud_fetch/?offset=nnn
+RewriteRule cloud_fetch/(\d+)/$ ./cloud_fetch/?offset=$1
+
+# redirect everyone but FeedBurner to the FeedBurner feed
+RewriteCond %{HTTP_USER_AGENT} !^FeedBurner
+RewriteRule georss.php http://feeds.feedburner.com/HenricoCrime [R=307,L]
+

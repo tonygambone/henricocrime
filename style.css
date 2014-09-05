@@ -1,0 +1,88 @@
+body { font-family: sans-serif; margin: 0px 0px 25px 0px; background-color: #eee; padding: 0px; }
+.info * { font-size: 80%; margin-top: 0px; }
+#map  { width: 500px; height: 500px; border: 1px solid #999; margin-top: 4px; }
+h1 { font-size: 120%; }
+h2 { font-size: 110%; }
+.nav { font-size: 80%; }
+.nav a.prev { float: left; }
+.nav a.next { float: right; }
+.nav div.spacer { clear: both; }
+#container { width: 501px; margin: 0px; padding: 0px 10px; }
+#coords { margin: 4px 0px 15px 0px; font-size: 80%; color: #999; font-style: italic; float: right; }
+#yattr { margin: 4px 0px 15px 0px; float: left; width: 200px; font-size: 80%; }
+
+#incidents { border: 1px solid #666; border-collapse: collapse; width: 100%; }
+#incidents td { border: 1px solid #666; border-width: 1px 0px; }
+.inc { 
+  font-size: 80%; 
+  border: 1px solid #666; 
+  border-bottom-width: 0px; 
+  padding-bottom: 8px;
+  background-color: white; 
+}
+.inc h3 { 
+  background-color: #eef9ee; 
+  margin: 0px; 
+  padding: 2px 2px 2px 4px; 
+  border-bottom: 1px solid #999; 
+}
+.inc p { margin: 0px; padding: 2px 2px 2px 8px; }
+.inc.miss h3 { background-color: #f9dddd; }
+.caption { font-size: 80%; font-weight: normal; font-style: italic; color: #666; }
+
+#header { 
+  background-color: #bbb; 
+  margin: 0px; 
+  padding: 0px;
+}
+#header .logo { margin: 4px 0px 0px 6px; }
+#menu  { 
+  font-size: 90%; 
+  margin: 0px; 
+  padding: 2px 0px; 
+  background-color: #666; 
+  border-top: 1px solid #333; 
+  border-bottom: 1px solid #333; 
+}
+#menu a { color: white; text-decoration: none; }
+#menu a:hover { color: #fec; }
+#menu li { 
+  display: inline; 
+  padding: 0px; 
+  margin-left: 15px; 
+  list-style-type: none; 
+}
+#title { padding-left: 10px; }
+#richmondmenu { 
+  position: absolute; 
+  font-size: 90%; 
+  top: 55px; 
+  right: 15px; 
+  width: 175px; 
+  text-align: right; 
+}
+#richmondmenu a { color: #fcc; text-decoration: none; }
+
+#info {
+  position: absolute; 
+  top: 130px;
+  left: 525px;
+  padding: 10px;
+  width: 500px;
+  font-size: 90%; 
+  border: 1px solid #ddd;
+  background-color: white;
+  margin-bottom: 25px; 
+}
+#info.full { top: 120px; left: 15px; }
+
+#info h2 { margin-top: 0px; }
+#info p { margin-bottom: 0px; }
+#info table.stat { border-collapse: collapse; }
+#info table.stat td { padding: 2px 8px; }
+#info table.stat tr.dark td { background-color: #ddd; }
+#info table.stat div.timebar { background-color: #600; margin: 0px; padding: 0px; height: 4px; }
+
+.msg { color: #060; background-color: #efe; border: 1px solid #060; padding: 4px; }
+.err { color: #900; background-color: #fee; border: 1px solid #600; padding: 4px; }
+

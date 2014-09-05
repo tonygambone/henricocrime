@@ -1,0 +1,33 @@
+This one would be how to get the crime category name
+from the code number.
+
+SELECT DISTINCT offense_code, offense_text, 
+FLOOR(offense_code/100) AS cat, 
+offense_categories.description 
+FROM incident 
+LEFT JOIN offense_categories 
+ON category = FLOOR(offense_code/100) 
+WHERE offense_code <= 2699;
+
+This one gets the number of incidents in a particular
+category.
+
+SELECT COUNT(*) FROM incident
+WHERE FLOOR(offense_code/100) = ???;
+
+Get a count of all the incidents by category, with category names.
+Last row is the total.
+
+SELECT COUNT(*) AS count, categories.description
+FROM incident 
+LEFT JOIN categories
+ON category = FLOOR(offense_code/100)
+WHERE begin_time BETWEEN '2006-09-04 00:00:00' AND '2006-09-04 23:59:59'
+AND offense_code <= 2699
+GROUP BY FLOOR(offense_code/100) WITH ROLLUP;
+
+SELECT HOUR(begin_time) AS hour, COUNT(*) AS count 
+FROM incident
+WHERE begin_time BETWEEN '2006-09-04 00:00:00' AND '2006-09-04 23:59:59'
+AND offense_code <= 2699
+GROUP BY HOUR(begin_time) WITH ROLLUP;

@@ -1,0 +1,16 @@
+
+Statistics page:
+ - Most common locations
+ - Most common crimes
+ - Most active days
+ - Least active days
+
+"Cloud map" for a long period of time
+
+SVG graphs by crime type
+
+Henrico border polyline - Done!
+
+Web services/RSS
+
+
